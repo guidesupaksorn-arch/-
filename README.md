@@ -1,11 +1,22 @@
-<div align="center">
+# Guide AI Customer OS
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+MVP customer-service AI for small businesses. The web interface lets a business configure its context, approved knowledge, and tone, then test customer conversations and human-handoff rules.
 
-  <h1>Built with AI Studio</h2>
+## Routes
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- `/` — customer-service testing interface
+- `/api/status` — configuration health check
+- `/api/chat` — OpenAI-backed chat endpoint (`POST`)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Environment
 
-</div>
+`OPENAI_API_KEY` must be configured in Vercel. Never commit the key to this repository.
+
+## Local setup
+
+```bash
+npm install
+vercel dev
+```
+
+The production project is `guide-ai-customer-os` and deploys from the `main` branch.
