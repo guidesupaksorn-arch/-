@@ -1,0 +1,1 @@
+export default async function handler(req,res){return res.status(200).json({ready:Boolean(process.env.OPENAI_API_KEY),service:'Guide AI Customer OS'});}
